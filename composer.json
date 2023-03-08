@@ -1,0 +1,26 @@
+{
+    "name": "pointcms/point-cms",
+    "description": "A lightweight blog CMS for PHP.",
+    "type": "cms",
+    "version": "0.0.1",
+    "keywords": ["CMS", "point", "pointcms"],
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Pixel",
+            "email": "pixel.com.ro@gmail.com"
+        }
+    ],
+    "prefer-stable": true,
+    "archive": {
+        "exclude": [
+            "/tests", "/build", "/.github", "/.gitattributes", "/.travis.yml", "/CONTRIBUTING.md", "/phpunit.xml"
+        ]
+    },
+    "require": {
+        "php": ">=8.0",
+        "ircmaxell/random-lib": "^1.1",
+        "ircmaxell/password-compat": "^1.0",
+        "indigophp/hash-compat": "^1.1"
+    }
+}

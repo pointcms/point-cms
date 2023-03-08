@@ -1,0 +1,5 @@
+Theme name:    Default
+Description:   This is the default, shiny theme for Your Blog CMS.
+Author name:   Pixel
+Author site:   http://pixel.com.ro
+License:       http://fsf.org/ 
