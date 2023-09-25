@@ -35,11 +35,11 @@
                     <a class="btn btn-outline-primary" href="<?php echo $base; ?>/admin"><?php echo __('global.upgrade_finished_thanks'); ?></a>
                 <?php else : // SOMETHING'S WRONG! ?>
                     <p><?php __('global.error_phrase'); ?></p>
-                    <a class="btn btn-primary" href="<?php echo $base; ?>/admin"><?php echo __('global.error_button'); ?></a>
+                    <a class="btn btn-outline-primary" href="<?php echo $base; ?>/admin"><?php echo __('global.error_button'); ?></a>
                 <?php endif; ?>
             </div>
             <div id="loading" hidden>
-                <h3><?php echo __('global.updating'); ?></h3>
+                <h4><?php echo __('global.updating'); ?></h4>
             </div>
             <div id="finished" hidden>
                 <h2 class="fin_h2"></h2>
@@ -96,13 +96,12 @@
         sendAjax = function () {
             $.ajax({
                 url: "<?php echo Uri::to('admin/upgrade/'); ?>",
-                type: 'POST',
-                success: function (data) {
-                    //data = JSON.parse(data);
-                    console.log(data);
+                type: "POST",
+                success: function(data, textStatus, jqXHR) {
+                    console.log(data); // Data is already a JavaScript object
                     finished(!!data.success);
                 },
-                error: function (jqXHR, textStatus, errorThrown) {
+                error: function(jqXHR, textStatus, errorThrown) {
                     // Error executing ajax.
                     console.log(errorThrown);
                     finished(false);
