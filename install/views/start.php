@@ -1,18 +1,14 @@
 <?php echo $header; ?>
-
 <section class="mt-5">
   <article>
     <h1 class="text-center">Hello. Willkommen. Bonjour. Croeso. Salut.</h1>
-
     <p>If you were looking for a truly lightweight blogging experience, you&rsquo;ve
       found the right place. Simply fill in the details below, and you&rsquo;ll have your
       new blog set up in no time.</p>
 
     <?php echo Notify::read(); ?>
   </article>
-
   <form method="post" action="<?php echo uri_to('start'); ?>" autocomplete="off">
-
     <fieldset>
       <div class="mb-3 row">
         <label for="lang" class="col-sm-2 col-form-label">Language</label>
@@ -45,11 +41,9 @@
         </div>
       </div>
     </fieldset>
-
     <section class="mt-3">
       <button type="submit" class="float-end btn btn-primary">Next Step &raquo;</button>
     </section>
   </form>
 </section>
-
 <?php echo $footer; ?>

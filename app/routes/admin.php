@@ -267,6 +267,48 @@ Route::post('admin/upgrade', [
         ]);
     }
 ]);
+Route::post('admin/upgrade/delete', [
+    'before' => 'auth',
+    'main'   => function () {
+        // Include the deleteAppUpdateFolder function here
+        function deleteAppUpdateFolder($folderPath) {
+            if (is_dir($folderPath)) {
+                $items = glob($folderPath . '/*');
+
+                foreach ($items as $item) {
+                    if (is_dir($item)) {
+                        deleteAppUpdateFolder($item);
+                    } else {
+                        unlink($item);
+                    }
+                }
+
+                // After deleting files and subdirectories, remove the folder itself
+                if (rmdir($folderPath)) {
+                    return true; // Deletion was successful
+                } else {
+                    return false; // Failed to delete the folder
+                }
+            }
+
+            return false; // The folder does not exist
+        }
+
+        // Define the path to the app_update folder
+        $appUpdateFolderPath = PATH . 'app_update';
+
+        // Call the deleteAppUpdateFolder function to delete the folder and its contents
+        $success = deleteAppUpdateFolder($appUpdateFolderPath);
+
+        // Return a JSON response indicating the result of the deletion
+        if ($success) {
+            return json_encode(['success' => true]);
+        } else {
+            return json_encode(['success' => false]);
+        }
+    }
+]);
+
 Route::collection(['before' => 'auth,csrf,install_exists'], function () {
 
 /*

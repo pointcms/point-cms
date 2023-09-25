@@ -43,7 +43,7 @@
             </div>
             <div id="finished" hidden>
                 <h2 class="fin_h2"></h2>
-                <a class="fin_goBack btn btn-outline-danger" href="<?php echo Uri::to('admin/upgrade/'); ?>">Try again</a>
+                <a class="fin_goBack btn btn-outline-warning" href="<?php echo Uri::to('admin/upgrade/'); ?>">Try again</a>
                 <a class="fin_continue btn btn-outline-primary" href="<?php echo Uri::to('admin/'); ?>">Nevermind</a>
             </div>
         </div>
@@ -100,6 +100,24 @@
                 success: function(data, textStatus, jqXHR) {
                     console.log(data); // Data is already a JavaScript object
                     finished(!!data.success);
+                    // If the upgrade was successful, trigger deletion of the 'app_update' folder
+                    if (!!data.success) {
+                        $.ajax({
+                            url: "<?php echo Uri::to('admin/upgrade/delete'); ?>", // Server-side route for deleting the folder
+                            type: "POST",
+                            success: function(deleteData) {
+                                deleteData = JSON.parse(deleteData);
+                                if (deleteData.success) {
+                                    console.log("app_update folder and its contents deleted successfully.");
+                                } else {
+                                    console.error("Failed to delete app_update folder and its contents.");
+                                }
+                            },
+                            error: function(jqXHR, textStatus, errorThrown) {
+                                console.error("Error deleting app_update folder: " + errorThrown);
+                            }
+                        });
+                    }
                 },
                 error: function(jqXHR, textStatus, errorThrown) {
                     // Error executing ajax.

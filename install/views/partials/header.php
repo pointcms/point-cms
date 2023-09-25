@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="en-gb">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,6 +16,5 @@
     }
   </style>
 </head>
-
 <body class="bg-light">
   <div class="container mt-5 w-75">
