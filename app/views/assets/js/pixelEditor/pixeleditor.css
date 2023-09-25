@@ -1,0 +1,252 @@
+.pixels-icon {
+    vertical-align: bottom;
+    -moz-transform: rotate(360deg);
+}
+.pixeleditor h1 + h2 {
+    margin-top: 24px
+}
+
+.pixeleditor h2 + h3 {
+    margin-top: 24px
+}
+
+.pixeleditor h3 + h4 {
+    margin-top: 24px
+}
+
+.pixeleditor h4 + h5 {
+    margin-top: 24px
+}
+
+.pixeleditor h5 + h6 {
+    margin-top: 24px
+}
+
+.pixeleditor a, .pixeleditor a:focus, .pixeleditor a:hover {
+    color: #0044c3
+}
+
+.pixeleditor p {
+    font-size: 16px;
+    line-height: 1.5
+}
+
+.pixeleditor h1, .pixeleditor h2, .pixeleditor h3, .pixeleditor h4, .pixeleditor h5, .pixeleditor h6 {
+    font-family: inherit;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #000b1d;
+    text-rendering: optimizeLegibility;
+    letter-spacing: -.01em
+}
+
+.pixeleditor h1 a, .pixeleditor h1 a:focus, .pixeleditor h1 a:hover, .pixeleditor h2 a, .pixeleditor h2 a:focus, .pixeleditor h2 a:hover, .pixeleditor h3 a, .pixeleditor h3 a:focus, .pixeleditor h3 a:hover, .pixeleditor h4 a, .pixeleditor h4 a:focus, .pixeleditor h4 a:hover, .pixeleditor h5 a, .pixeleditor h5 a:focus, .pixeleditor h5 a:hover, .pixeleditor h6 a, .pixeleditor h6 a:focus, .pixeleditor h6 a:hover {
+    color: inherit;
+    text-decoration: none
+}
+
+.pixeleditor h1 {
+    font-size: 40px;
+    line-height: 1.2
+}
+
+.pixeleditor h2  {
+    font-size: 24px;
+    line-height: 1.3
+}
+
+.pixeleditor h3 {
+    font-size: 21px;
+    line-height: 1.5
+}
+
+.pixeleditor ol, .pixeleditor ul {
+    margin-left: 20px
+}
+
+.pixeleditor li {
+    font-size: 16px;
+    line-height: 1.5
+}
+
+.pixeleditor li li {
+    font-size: 1em
+}
+
+.pixeleditor-wrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.pixeleditor {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,"Helvetica Neue",Arial,sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    outline: none;
+    box-sizing: border-box;
+    padding: 20px 0 0 10px;
+    min-height: 350px;
+
+}
+.pixeleditor:focus {
+    outline: none;
+}
+.pixeleditor pre {
+    overflow: auto;
+    white-space: pre;
+    font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    font-size: 90%;
+    line-height: 1.5;
+    color: #262f3f;
+    background-color: #f5f5f6;
+    padding: 1em
+}
+
+.pixeleditor pre code {
+    padding: 0;
+    border: 0;
+    background: 0 0;
+    font-size: 100%;
+    display: block;
+    line-height: inherit
+}
+
+.pixeleditor-temp {
+    text-align: left;
+    box-sizing: border-box;
+    font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    width: 100%;
+    display: block;
+    margin: 0;
+    border: none;
+    box-shadow: none;
+    border-radius: .375rem;
+    background-color: #f5f5f6;
+    color: #000;
+    font-size: 16px;
+    outline: 0;
+    padding: 10px 18px 20px 18px;
+    line-height: 1.5;
+    min-height: 350px;
+    resize: vertical;
+}
+.pixeleditor-toolbar {
+    white-space: nowrap;
+    height: 40px;
+    overflow-y: hidden;
+    -ms-overflow-style: none;
+    margin-left: 0;
+    padding-left: 0;
+
+}
+.pixeleditor-additional-toolbar {
+    position: absolute; /* Position absolutely */
+    display: none; /* Hide it by default */
+    margin-top: 40px;
+    right: 0; /* Align it to the right side */
+    text-align: left;
+    background-color: #fff; /* Background color */
+    border: 1px solid #ccc; /* Add a border for separation */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+    float: right;
+    white-space: nowrap;
+    height: 50px;
+    padding: 5px;
+    border-radius: 0.375rem;
+    z-index: 100;
+}
+.pixeleditor-additional-toolbar {
+    max-width: 360px;
+    width: max-content;
+}
+
+.pixeleditor-toolbar ul:after, .pixeleditor-additional-toolbar ul:after {
+    /* clearfix */
+    content: "";
+    display: table;
+    clear: both;
+}
+.pixeleditor-toolbar ul, .pixeleditor-additional-toolbar ul {
+    padding-left: 0!important;
+}
+.pixeleditor-toolbar li {
+    list-style: none;
+    float: left;
+    position: relative;
+}
+.pixeleditor-toolbar li:last-child {
+    float: right; /* last li item */
+}
+.pixeleditor-additional-toolbar li {
+    list-style: none;
+    float: left;
+    position: relative;
+}
+.pixeleditor-toolbar li ul {
+    position: absolute;
+    left: 0;
+    top: 31px;
+    z-index: 5;
+    display: none;
+}
+
+.pixeleditor-toolbar li button, .pixeleditor-additional-toolbar li button {
+    background: #fff;
+    color: #777;
+    border: 1px solid #fff;
+    font-weight: bold;
+    cursor: pointer;
+    display: inline-block;
+    padding: 5px 8px;
+    float: left;
+    min-width: 30px;
+    outline: none;
+    border-radius: 2px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.pixeleditor-toolbar li button:hover, .pixeleditor-additional-toolbar li button:hover {
+    background: rgb(59, 73, 223, 0.15);
+    border-radius: 5px;
+}
+
+.pixeleditor-toolbar li button:active, .pixeleditor-additional-toolbar li button:active {
+    background: rgb(59, 73, 223, 0.15);
+    border-radius: 5px;
+}
+
+/* Active state for buttons */
+.pixeleditor-toolbar li button.active, .pixeleditor-additional-toolbar li button.active {
+    background-color: #ddd;
+    border-radius: 4px;
+
+}
+
+/* EasyEditor Statusbar */
+.pixeleditor-statusbar {
+    padding: 5px;
+    text-align: right;
+    font-size: 12px;
+    outline: 0;
+}
+
+.pixeleditor blockquote {
+    border-left: 2px solid #e9e9e9;
+    padding-left: 20px;
+    color: #777;
+}
+.pixeleditor[contenteditable=true]:empty:before{
+    content: attr(placeholder);
+    display: block;
+    opacity: 0.5;
+    cursor: text;
+}
+
+.pixeleditor ul,
+.pixeleditor ol {
+    margin-left: 30px;
+}
+

@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+body {
+    font-family: 'Roboto', sans-serif;
+}
+a,
+a:focus,
+btn:focus,
+input,
+input:focus,
+button,
+button:active,
+button:focus,
+button:hover,
+select,
+select:focus,
+textarea,
+textarea:focus {
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+    outline: 0 !important;
+
+}
+
+a, a:hover {
+    color: #1a202c;
+}
+
+
+::-webkit-slider-thumb,
+input[type="range"] {
+    -webkit-appearance: none;
+}
+
+input[type="range"] {
+    background: #cdd3db;
+    cursor: col-resize;
+    overflow: hidden;
+    padding: 0 5px 0 0 !important;
+}
+
+::-webkit-slider-thumb {
+    background: #95a1b2;
+    border-radius: 3px;
+    display: block;
+    height: 29px;
+    position: relative;
+    width: 15px;
+}
+
+::-webkit-slider-thumb::before {
+    background: #95a1b2;
+    bottom: 0;
+    content: "";
+    display: block;
+    left: -300px;
+    position: absolute;
+    right: 10px;
+    top: 0;
+}
+
+
+a {
+    text-decoration: none !important;
+}
+
+.alert {
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.alert-error {
+    background-color: #ffedeb;
+    border-color: #ffedeb;
+    color: #b81800;
+}
+.alert-success {
+    background-color: #f0fdec;
+    border-color: #f0fdec;
+    color: #1c6c09;
+}
+.alert-notice {
+    background-color: #f0faff;
+    border-color: #f0faff;
+    color: #005585;
+}
+.archived {
+    background-color: #6c757d !important;
+
+}
+
+.approved {
+    background-color: #198754 !important;
+
+}
+
+#dropdown-menu .dropdown-menu {
+    position: absolute !important;
+    min-width: 220px;
+    z-index: 1999!important;
+}
+
+.avatar-sm {
+    border-radius: 50%;
+    cursor: pointer;
+    height: 2rem;
+    width: 2rem;
+    vertical-align: middle;
+    margin-top: 5px;
+
+}
+#back-to-top {
+    bottom: 25px;
+    display: none;
+    position: fixed;
+    right: 25px;
+}
+
+.back-to-top {
+    opacity: .65;
+    z-index: 9999999;
+}
+header .bi {
+    width: 1em;
+    height: 1.1em;
+    vertical-align: -.125em;
+    fill: currentcolor;
+}
+
+.container .form-check-input {
+    font-size: 1rem;
+    font-weight: 400;
+    height: 39px;
+    line-height: 1.5;
+    margin-top: 0;
+    padding: 17.6px;
+    width: 66px;
+}
+.container input[type="checkbox"]:active,
+.container input[type="checkbox"]:active,
+.container input[type="checkbox"]:focus,
+.container input[type="checkbox"]:checked ,
+.container input[type="checkbox"]:hover{
+    border:1px solid #ced4da !important;
+    outline:none !important;
+}
+.container input[type="checkbox"] {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background: url(../img/close.png) 50% 50% no-repeat;
+    cursor: pointer;
+
+}
+
+.container input[type="checkbox"]:checked {
+    background: url(../img/check.png) 50% 50% no-repeat;
+    cursor: pointer;
+
+}
+.cursor-pointer {
+    cursor: pointer !important;
+}
+.dropdown-menu-end {
+    right: 0;
+    left: auto;
+}
+
+.fill-light-gray {
+    fill: #a0aec0;
+}
+
+.icon-square {
+    align-items: center;
+    border-radius: .55rem;
+    display: inline-flex;
+    font-size: 1.5rem;
+    height: 3rem;
+    justify-content: center;
+    width: 3rem;
+}
+
+#notification .noti-icon-badge {
+    display: inline-block;
+    position: absolute;
+    top: -7px;
+    right: -1px;
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+    background-color: #fa5c7c
+}
+.arrow-none:after {
+    display: none
+}
+.progress-sm {
+    height: 5px;
+}
+
+.sortable {
+    list-style-type: none;
+}
+
+.sortable li {
+    border: 2px solid transparent;
+    margin: 10px 0;
+    width: 100%;
+}
+.start-90 {
+    left: 90%!important;
+}
+.sortable li.item {
+    background: #fff;
+    border-radius: 5px;
+    color: #6a788d;
+    cursor: move;
+    margin: 10px 0;
+    padding: 7px 14px;
+    width: 100%;
+}
+
+.sortable li.over {
+    border: 2px solid #ccc;
+}
+
+.sortable li.moving {
+    opacity: 0.7;
+}
+
+
+.user-image-upload input[type="file"] {
+    display: none;
+}
+
+.text-approved {
+    color: #198754;
+}
+.text-draft  {
+    color: #dc3545;
+}
+.text-pending {
+    color: #dc3545;
+}
+.text-published  {
+    color: #198754;
+}
+.text-spam {
+    color: #ffc107;
+}
+#the-count {
+    float: right;
+    padding: 0.1rem 0 0 0;
+    font-size: 0.775rem;
+
+}
+

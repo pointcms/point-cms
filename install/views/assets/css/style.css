@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+body, html {
+    font-family: 'Lato', sans-serif;
+}
+.alert {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.alert-error {
+    color: #842029;
+    background-color: #f8d7da;
+    border-color: #f5c2c7;
+}
+
+.alert-notice {
+    color: #084298;
+    background-color: #cfe2ff;
+    border-color: #b6d4fe;
+}

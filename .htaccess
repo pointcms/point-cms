@@ -1,0 +1,27 @@
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+	RewriteBase /point-cms-alpha
+
+	# Allow any files or directories that exist to be displayed directly
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+
+	# Rewrite all other URLs to index.php/URL
+	RewriteRule ^(.*)$ index.php?/$1 [L]
+
+	#Rewrite anchor directories to index.php/URL even though they exist.
+	#Don't rewrite files so that we can still load CSS, etc (except .log files).
+	RewriteCond %{REQUEST_FILENAME} -f
+	RewriteCond %{REQUEST_URI} !\.log$
+	RewriteRule .* - [S=5]
+
+	RewriteRule ^(system(?:$|\/.*$)) index.php?/$1 [L]
+	RewriteRule ^(app(?:$|\/.*$)) index.php?/$1 [L]
+	RewriteRule ^(content(?:$|\/.*$)) index.php?/$1 [L]
+	RewriteRule ^(themes(?:$|\/.*$)) index.php?/$1 [L]
+	RewriteRule ^(vendor(?:$|\/.*$)) index.php?/$1 [L]
+</IfModule>
+
+<IfModule !mod_rewrite.c>
+	ErrorDocument 404 index.php
+</IfModule>
