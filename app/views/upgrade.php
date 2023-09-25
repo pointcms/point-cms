@@ -98,7 +98,7 @@
                 url: "<?php echo Uri::to('admin/upgrade/'); ?>",
                 type: 'POST',
                 success: function (data) {
-                    data = JSON.parse(data);
+                    //data = JSON.parse(data);
                     console.log(data);
                     finished(!!data.success);
                 },
