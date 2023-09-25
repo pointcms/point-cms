@@ -43,8 +43,8 @@
             </div>
             <div id="finished" hidden>
                 <h2 class="fin_h2"></h2>
-                <a class="fin_goBack btn btn-outline-primary" href="<?php echo Uri::to('admin/upgrade/'); ?>">Try again</a>
-                <a class="fin_continue btn btn-outline-secondary" href="<?php echo Uri::to('admin/'); ?>">Nevermind</a>
+                <a class="fin_goBack btn btn-outline-danger" href="<?php echo Uri::to('admin/upgrade/'); ?>">Try again</a>
+                <a class="fin_continue btn btn-outline-primary" href="<?php echo Uri::to('admin/'); ?>">Nevermind</a>
             </div>
         </div>
     </div>

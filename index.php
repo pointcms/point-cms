@@ -1,7 +1,7 @@
 <?php
 define('DS', DIRECTORY_SEPARATOR);
 define('ENV', getenv('APP_ENV'));
-define('VERSION', '0.0.3');
+define('VERSION', '0.0.5');
 define('MIGRATION_NUMBER', 0);
 
 define('PATH', __DIR__ . DS);
